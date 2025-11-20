@@ -11,7 +11,7 @@
 //     .then(response => console.log(response))
 
 
-// apa itu Promise = janji,
+// apa itu Promise = janji,         
 // sebuah object yang merepresntasikan keberhasilan / kegagalan a event yang asynchronous di masa yg akan datang
 // janji(terpenuji / Ingkar)
 
@@ -58,35 +58,35 @@
 
 //     console.log('selesai')
 
-// Promise.all()
+    // Promise.all()
 
-// const film = new Promise(resolve => {
-//     setTimeout(()=>{
-//         resolve([{
-//             judul: 'Avengerts',
-//             sutradara: 'epan',
-//             pemeran:'negan'
-//         }])
-//     }, 1000)
-// })
+    const film = new Promise(resolve => {
+        setTimeout(()=>{
+            resolve([{
+                judul: 'Avengerts',
+                sutradara: 'epan',
+                pemeran:'negan'
+            }])
+        }, 1000)
+    })
 
-// const cuaca = new Promise(resolve =>{
-//     setTimeout(() => {
-//         resolve([{
-//             kota: 'bandung',
-//             temp:26,
-//             kondisi:'Cerah Berawan'
-//         }])
-//     }, 500);
-// })
+    const cuaca = new Promise(resolve =>{
+        setTimeout(() => {
+            resolve([{
+                kota: 'bandung',
+                temp:26,
+                kondisi:'Cerah Berawan'
+            }])
+        }, 500);
+    })
 
-// // film.then(response => console.log(response))
-// // cuaca.then(response => console.log(response))
+    // film.then(response => console.log(response))
+    // cuaca.then(response => console.log(response))
 
-// Promise.all([film,cuaca])
-// // .then(reponse => console.log(reponse))
-//     .then(response => {
-//         const [film, cuaca] = response
-//         console.log(film)
-//         console.log(cuaca)
-//     })
+    Promise.all([film,cuaca])
+    // .then(reponse => console.log(reponse))
+        .then(response => {
+            const [film, cuaca] = response
+            console.log(film)
+            console.log(cuaca)
+        })
